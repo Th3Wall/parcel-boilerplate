@@ -24,11 +24,13 @@
   },
   "husky": {
     "hooks": {
+      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
+      "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
+      "post-applypatch": "echo \"[Husky] post-applypatch\"",
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.+(js|jsx)": "eslint --cache --fix",
-    "*.+(json|css|md)": "prettier --write"
+    "*": ["eslint --cache --fix", "prettier --write"]
   }
 }
