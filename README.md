@@ -1,1 +1,1 @@
-# parcel-boilerplate
+# Parcel Boilerplate

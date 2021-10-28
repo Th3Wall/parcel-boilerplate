@@ -6,12 +6,29 @@
   "license": "MIT",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel src/index.pug",
-    "build": "parcel build src/index.pug"
+    "start": "rm -rf .parcel-cache && rm -rf dist && parcel src/index.pug",
+    "build": "parcel build src/index.pug",
+    "lint": "prettier --check .",
+    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\""
   },
   "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/eslint-parser": "^7.15.8",
     "@parcel/transformer-pug": "^2.0.0",
     "@parcel/transformer-sass": "^2.0.0",
-    "parcel": "^2.0.0"
+    "eslint": "^8.1.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
+    "parcel": "^2.0.0",
+    "prettier": "^2.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|jsx)": "eslint --cache --fix",
+    "*.+(json|css|md)": "prettier --write"
   }
 }

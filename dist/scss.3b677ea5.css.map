@@ -1,1 +1,0 @@
-{"mappings":"AAIA;EACE;;;AAGF;EACE;EACA;EACA,kBAVM","sources":["src/scss/index.scss"],"sourcesContent":["$red: red;\n$black: black;\n$white: white;\n\n* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  background-color: $black;\n}"],"names":[],"version":3,"file":"scss.3b677ea5.css.map","sourceRoot":"/__parcel_source_root/"}
