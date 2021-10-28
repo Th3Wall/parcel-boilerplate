@@ -1,0 +1,17 @@
+{
+  "name": "parcel-boilerplate",
+  "description": "A test repo for parcel environment setup",
+  "author": "Th3Wall",
+  "version": "1.0.0",
+  "license": "MIT",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel src/index.pug",
+    "build": "parcel build src/index.pug"
+  },
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.0.0",
+    "@parcel/transformer-sass": "^2.0.0",
+    "parcel": "^2.0.0"
+  }
+}
