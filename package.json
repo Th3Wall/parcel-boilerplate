@@ -8,8 +8,9 @@
   "scripts": {
     "start": "rm -rf .parcel-cache && rm -rf dist && parcel src/index.pug",
     "build": "parcel build src/index.pug",
-    "lint": "prettier --check .",
-    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\""
+    "lint": "prettier --check ./src",
+    "format": "prettier --write ./src",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -17,20 +18,18 @@
     "@parcel/transformer-pug": "^2.0.0",
     "@parcel/transformer-sass": "^2.0.0",
     "eslint": "^8.1.0",
+    "eslint-plugin-import": "^2.25.2",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
     "parcel": "^2.0.0",
     "prettier": "^2.4.1"
   },
-  "husky": {
-    "hooks": {
-      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
-      "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
-      "post-applypatch": "echo \"[Husky] post-applypatch\"",
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*": ["eslint --cache --fix", "prettier --write"]
+    "./src/*": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "./src/*.js": "eslint --cache --fix",
+    "./src/*.{js,css,md}": "prettier --write"
   }
 }

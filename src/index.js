@@ -7,4 +7,4 @@ parcelTest.test = new testClass();
 // init
 parcelTest.test.init();
 
-console.log("mock data => ", data)
+console.log("mock data => ", data);
