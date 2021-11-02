@@ -24,16 +24,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
     "husky": "^7.0.0",
-    "lint-staged": "^11.2.6",
     "parcel": "^2.0.0",
     "prettier": "^2.4.1"
-  },
-  "lint-staged": {
-    "./src/*": [
-      "eslint --cache --fix",
-      "prettier --write"
-    ],
-    "./src/*.js": "eslint --cache --fix",
-    "./src/*.{js,css,md}": "prettier --write"
   }
 }
