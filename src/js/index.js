@@ -1,5 +1,5 @@
-import testClass from "./js/components/test";
-import data from "./mock/test.json";
+import testClass from "./components/test";
+import data from "../mock/test.json";
 
 const parcelTest = {};
 //instance

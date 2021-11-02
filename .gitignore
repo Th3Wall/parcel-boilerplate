@@ -353,3 +353,5 @@ MigrationBackup/
 .idea
 package-lock.json
 .eslintcache
+dist
+*.DS_Store

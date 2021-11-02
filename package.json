@@ -8,8 +8,11 @@
   "scripts": {
     "start": "rm -rf .parcel-cache && rm -rf dist && parcel src/index.pug",
     "build": "parcel build src/index.pug",
-    "lint": "prettier --check ./src",
-    "format": "prettier --write ./src",
+    "lint": "prettier --check .",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "format": "prettier --write .",
+    "test": "npm run check-format && npm run check-lint && npm run build",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -18,8 +21,9 @@
     "@parcel/transformer-pug": "^2.0.0",
     "@parcel/transformer-sass": "^2.0.0",
     "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
     "lint-staged": "^11.2.6",
     "parcel": "^2.0.0",
     "prettier": "^2.4.1"
