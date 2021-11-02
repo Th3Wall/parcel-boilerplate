@@ -1,4 +1,9 @@
 section.test
+    picture(class="test__picture")
+        source(srcset="images/parcel.jpeg?as=avif&width=700&quality=90" type="image/avif")
+        source(srcset="images/parcel.jpeg?as=webp&width=700&quality=90" type="image/webp")
+        source(srcset="images/parcel.jpeg?width=700&quality=90" type="image/jpeg")
+        img(src="images/parcel.jpeg?width=700&quality=90" alt="test image")
     .test__content
-        h2.test__content--title Test content
+        h2.test__content--title Parcel test content
         p.test__content--subtitle Lorem Ipsum dolor sit amet
