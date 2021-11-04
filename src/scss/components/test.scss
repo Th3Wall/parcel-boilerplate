@@ -1,5 +1,4 @@
 .test {
-  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,12 +9,12 @@
     margin-top: 1rem;
 
     &--title {
-      font-size: 3rem;
+      @include fluid-type(768px, 1920px, 26px, 48px);
       font-weight: 800;
       letter-spacing: -0.1rem;
     }
     &--subtitle {
-      font-size: 1.75rem;
+      @include fluid-type(768px, 1920px, 14px, 28px);
     }
   }
 }

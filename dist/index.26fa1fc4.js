@@ -1,2 +1,0 @@
-function t(t){return t&&t.__esModule?t.default:t}class e{testFunc(){console.log("Hi, I'm a test function!")}init(){this.testFunc()}constructor(){return e.instance||(this.set={headings:document.querySelectorAll("h1")},e.instance=this),e.instance}}var n;n=JSON.parse('{"hello":["world","computer"]}');const s={};s.test=new e,s.test.init(),console.log("mock data => ",t(n));
-//# sourceMappingURL=index.26fa1fc4.js.map

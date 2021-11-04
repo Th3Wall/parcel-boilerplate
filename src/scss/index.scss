@@ -1,4 +1,9 @@
-@import "color-swatch";
+@import "utils/color-swatch";
+@import "utils/variables";
+@import "utils/breakpoints";
+@import "utils/mixins";
+@import "utils/keyframes";
+@import "utils/fluid-type";
 
 *,
 *:before,
@@ -18,8 +23,32 @@ html {
 }
 
 body {
-  background-color: $yellow-lighter;
-  color: $white;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: $main-font;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: $white;
+  color: $font-color;
+  text-align: center;
+}
+
+picture {
+  display: flex;
+  justify-content: center;
+}
+
+.test {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
 
   @import "./components/test";
 }
