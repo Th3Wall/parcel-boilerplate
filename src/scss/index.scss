@@ -1,17 +1,10 @@
+@import "utils/reset";
 @import "utils/color-swatch";
 @import "utils/variables";
 @import "utils/breakpoints";
 @import "utils/mixins";
 @import "utils/keyframes";
 @import "utils/fluid-type";
-
-*,
-*:before,
-*:after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
 html {
   font-size: 16px;
@@ -29,18 +22,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   font-family: $main-font;
   font-size: 1rem;
   font-weight: 400;
   background-color: $white;
   color: $font-color;
   text-align: center;
-}
-
-picture {
-  display: flex;
-  justify-content: center;
 }
 
 .test {
